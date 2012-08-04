@@ -1,8 +1,9 @@
 # Blu-ray AutoPlay
 
-## Supported OSes
+## Requirements
 
-*  Windows 7 x86 (32-bit) and x64 (64-bit)
+*  Windows 7 x86 (32-bit) or x64 (64-bit)
+*  .NET Framework 4
 
 ## Supported Media Players
 

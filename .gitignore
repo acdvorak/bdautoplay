@@ -1,0 +1,16 @@
+/bin
+/src/bin
+/src/obj
+/distrib/*.exe
+ipch
+newrc
+*.a
+*.aps
+*.db
+*.old
+*.opensdf
+*.psess
+*.sdf
+*.suo
+*.user
+

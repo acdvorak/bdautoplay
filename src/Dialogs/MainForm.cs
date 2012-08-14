@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Security.Principal;
 
 namespace BlurayAutoPlay
 {
@@ -34,8 +35,18 @@ namespace BlurayAutoPlay
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            ReloadMediaPlayers();
-            ResetButtons();
+            bool isAdmin = new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator);
+
+            if (isAdmin)
+            {
+                ReloadMediaPlayers();
+                ResetButtons();
+            }
+            else
+            {
+                MessageBox.Show("You must run this program as an Administrator.");
+                this.Close();
+            }
         }
 
         private void ReloadMediaPlayers()

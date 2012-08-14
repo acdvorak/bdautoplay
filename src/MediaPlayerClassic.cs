@@ -47,13 +47,13 @@ namespace BlurayAutoPlay
         public bool IsInstalled()
         {
             MPCSearchResult searchResult;
-            /*if ((searchResult = QuickSearch()) != null)
+            if ((searchResult = QuickSearch()) != null)
             {
                 exePath = searchResult.Path;
                 exeName = searchResult.Name;
                 return true;
             }
-            else */if ((searchResult = FullSearch()) != null)
+            else if ((searchResult = FullSearch()) != null)
             {
                 exePath = searchResult.Path;
                 exeName = searchResult.Name;
